@@ -1,15 +1,15 @@
 <?php
-session_start(); 
-$_SESSION = array();
-if (ini_get("session.use_cookies")) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 60*60,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-    );
-}
-unset($_SESSION['login']);
-session_destroy(); // destroy session
-header("location:../adminlogin.php"); 
-?>
+session_start();
 
+// Destroy all session data
+$_SESSION = array();
+session_destroy();
+
+// Set headers to prevent back navigation
+header("Cache-Control: no-cache, must-revalidate");
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+
+// Redirect to login page
+header("Location: index.php");
+exit;
+?>
