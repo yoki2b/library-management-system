@@ -7,6 +7,26 @@ session_start();
 <head>
     <title>Admin Login</title>
     <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- ✅ Simple CSS styling for better UI -->
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
